@@ -59,6 +59,10 @@ a {
   color: #2e2f42;
 }
 
+.gallery-item {
+  box-shadow: 0 3px 10px #f4c8e9;
+}
+
 .gallery-link {
   text-decoration: none;
 }
@@ -127,6 +131,7 @@ a {
   gap: 8px;
   justify-content: center;
   margin-bottom: 32px;
+  margin-top: 30px;
 }
 
 .form-text:not(:placeholder-shown) {
@@ -147,6 +152,9 @@ a {
   height: 44px;
   background-color: #4e75ff;
   border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
 }
 
 .btn-submit:hover,
@@ -201,7 +209,16 @@ a {
   border: none;
   padding: 8px 16px;
   background-color: #4e75ff;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
 }
+
+.loadMoreBtn:hover,
+.loaderMore:focus {
+  background-color: #6c8cff;
+}
+
 .loaderMore {
   width: 12px;
   height: 12px;

@@ -12,12 +12,16 @@ h6 {
 }
 
 body {
-  background-color: rgb(228, 255, 245);
+  background-color: darkcyan;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 :root {
@@ -42,6 +46,7 @@ a {
   column-gap: 24px;
   row-gap: 24px;
   justify-content: center;
+  margin-bottom: 32px;
 }
 
 .gallery-info-title {
@@ -182,6 +187,52 @@ a {
   }
 }
 
+.loadMoreBtn {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+}
+.loaderMore {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+  }
+  33% {
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+  }
+  66% {
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+  }
+  100% {
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+  }
+}
+
 .is-hidden {
   display: none;
+}
+
+.is-show {
+  opacity: 0;
 }

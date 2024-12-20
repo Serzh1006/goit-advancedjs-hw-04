@@ -73,6 +73,14 @@ const onSubmitSearchPhotos = async e => {
   const markup = renderBySearch(data.hits);
   resetFunc(markup);
   totalPages = Math.ceil(totalPhotos / 15);
+  const card = document.querySelector('.gallery-item');
+  const rect = card.getBoundingClientRect();
+  window.scrollBy(0, rect.height * 2);
+  window.scrollBy({
+    top: 100,
+    left: 100,
+    behavior: 'smooth',
+  });
 };
 
 const onClickLoadPhotos = async () => {
